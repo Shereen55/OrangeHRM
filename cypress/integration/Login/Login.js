@@ -94,7 +94,6 @@ When('User clicks on refresh page', () => {
 
 Then('User should be redirected to the login page after reloading the page', () => {
   loginPageAssertion.loginPageUrl();
-
 });
 
 When('User clicks on the logout button', () => {
