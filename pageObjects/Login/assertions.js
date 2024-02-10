@@ -2,6 +2,7 @@ class LoginPageAssertion {
 
     dashboardInUrl() {
         cy.url().should("include", "/dashboard");
+        cy.wait(3000);
         return this;
     }
 

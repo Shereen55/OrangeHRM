@@ -17,8 +17,8 @@ class LoginPageAction {
     }
 
     clickLogoutButton() {
-      cy.get('.oxd-icon bi-caret-down-fill oxd-userdropdown-icon').click();
-      cy.get('[href="/web/index.php/auth/logout"]').click();
+      cy.get('.oxd-userdropdown-tab > .oxd-icon').click();
+      cy.contains('Logout').click();
     }
 
     clickForgotPasswordLink() {
@@ -32,7 +32,7 @@ class LoginPageAction {
     login() {
       this.visitLoginPage();
       this.enterUsername('Admin');
-      this.enterPassword('admin 123');
+      this.enterPassword('admin123');
       this.clickLoginButton();
     }
   }

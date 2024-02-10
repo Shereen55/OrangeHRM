@@ -6,15 +6,15 @@ const loginPageAction = new LoginPageAction();
 const loginPageAssertion = new LoginPageAssertion();
 
 Given('User is on the login page', () => {
-  loginPageAction.visitLoginPage();
+  loginPageAction.visitLoginPage()
 });
 
 Given('User is logged in to OrangeHRM', () => {
-  loginPageAction.login();
+  loginPageAssertion.dashboardInUrl();
 });
 
 When('User enters valid username and password', () => {
-  loginPageAction.enterUsername('admin');
+  loginPageAction.enterUsername('Admin');
   loginPageAction.enterPassword('admin123');
 });
 
@@ -97,7 +97,7 @@ Then('User should be redirected to the login page after reloading the page', () 
 });
 
 When('User clicks on the logout button', () => {
-  loginPageAction.login();
+  loginPageAction.clickLogoutButton();
 });
 
 Then('User should be redirected to the login page', () => {
